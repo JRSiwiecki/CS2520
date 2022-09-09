@@ -1,0 +1,1 @@
+python .\Lab1_jsiwiecki.py

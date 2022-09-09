@@ -1,7 +1,3 @@
-# Name: Joseph Siwiecki
-# Class: CS 2520.01
-# Lab 1 - Task 2
-
 print("Welcome to the Ice Cream Store")
 
 print("Alvin's purchase:")
