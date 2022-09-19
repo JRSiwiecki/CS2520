@@ -9,8 +9,6 @@ from math import sin
 
 # --------------------- TASK 1 ---------------------
 
-print("Welcome to Joseph's BMI Calculator!")
-
 # get the user's choice of calculator, make sure it is either "USA" or "Metric"
 # if it isn't, keep asking
 while True:
