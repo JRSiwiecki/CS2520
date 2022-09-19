@@ -72,4 +72,39 @@ print("fun 3:", fun_3)
 print("fun 4:", fun_4)
 print("fun 5:", fun_5)
 
-# --------------------- TASK 3 ---------------------
+# --------------------- TASK 4 ---------------------
+
+def grade_test(test_score):
+    
+    if test_score > 100:
+        return "Invalid score; too high."
+    
+    elif test_score >= 90: 
+        return "A"
+    
+    elif test_score >= 80:
+        return "B"
+    
+    elif test_score >= 70:
+        return "C"
+    
+    elif test_score >= 60:
+        return "D"
+    
+    elif test_score >= 0:
+        return "F"
+    
+    elif test_score < 0:
+        return "Invalid score; too low."
+    
+while True:
+    student_score = input("Enter your test score (or enter Q to quit): ")
+    
+    if student_score == "q" or student_score == "Q":
+        break
+    
+    student_score = int(student_score)
+    student_grade = grade_test(student_score)
+    
+    print("Your letter grade is:", student_grade)
+        
