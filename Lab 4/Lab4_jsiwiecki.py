@@ -46,7 +46,30 @@ print("i = ", i)
 # EXPLANATION: 
 
 # My prediction was mostly correct, as the first print statement outside of the function throws an error,
-# and the second one doesn't run because the program crashed. If it did run, it would also throw an error.
+# and the second one doesn't run because the program crashed. If the second one did run, it would also throw an error.
 
 # --------------------- TASK 3 ---------------------
 
+def fun(x = 1, y = 2):
+    x = x + y
+    y += 1
+    return x * y
+
+a, b = 3, 2
+
+# These 3 function calls pass in constants.
+fun_1 = fun(3, 2)
+fun_2 = fun(y = 2, x = 3)
+fun_3 = fun(x = 3)
+
+# These last 2 function calls pass in other variables.
+fun_4 = fun(a, b)
+fun_5 = fun(x = a, y = b)
+
+print("fun 1:", fun_1)
+print("fun 2:", fun_2)
+print("fun 3:", fun_3)
+print("fun 4:", fun_4)
+print("fun 5:", fun_5)
+
+# --------------------- TASK 3 ---------------------
