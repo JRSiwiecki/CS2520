@@ -13,6 +13,11 @@ f_sum = fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1])
 print("Normal sum:", normal_sum)
 print("fsum:", f_sum)
 
+# OUTPUT: 
+
+# Normal sum: 0.9999999999999999
+# fsum: 1.0
+
 # EXPLANATION: 
 
 # We are adding .1 exactly 10 times, which to humans, is just 1.0 or 1.
@@ -43,6 +48,13 @@ def prob2():
 print(prob1())
 print("i = ", i)
 
+# OUTPUT: 
+
+# Traceback (most recent call last):
+#   File "c:\Users\JRSiw\Desktop\Programming\School Workspace\CS2520\Lab 4\Lab4_jsiwiecki.py", line 45, in <module>
+#     print(prob1())
+# NameError: name 'prob1' is not defined. Did you mean: 'prob2'?
+
 # EXPLANATION: 
 
 # My prediction was mostly correct, as the first print statement outside of the function throws an error,
@@ -71,6 +83,14 @@ print("fun 2:", fun_2)
 print("fun 3:", fun_3)
 print("fun 4:", fun_4)
 print("fun 5:", fun_5)
+
+# OUTPUT: 
+
+# fun 1: 15
+# fun 2: 15
+# fun 3: 15
+# fun 4: 15
+# fun 5: 15
 
 # --------------------- TASK 4 ---------------------
 
@@ -107,4 +127,22 @@ while True:
     student_grade = grade_test(student_score)
     
     print("Your letter grade is:", student_grade)
+    
+# OUTPUT: 
+
+# Enter your test score (or enter Q to quit): -5
+# Your letter grade is: Invalid score; too low.
+# Enter your test score (or enter Q to quit): 105
+# Your letter grade is: Invalid score; too high.
+# Enter your test score (or enter Q to quit): 100
+# Your letter grade is: A
+# Enter your test score (or enter Q to quit): 87
+# Your letter grade is: B
+# Enter your test score (or enter Q to quit): 69
+# Your letter grade is: D
+# Enter your test score (or enter Q to quit): 33
+# Your letter grade is: F
+# Enter your test score (or enter Q to quit): 77
+# Your letter grade is: C
+# Enter your test score (or enter Q to quit): q
         
