@@ -195,52 +195,125 @@ else:
 # --------------------- TASK 2 ---------------------
 
 # infinite loop, user exits when they please
-# while True:
+while True:
     
-#     # get input and evaluate it with the math library in case "pi" is entered
-#     value = input("Enter an x value in radians (x must be in the range [-π, π]), or enter Q to quit: ")
+    # get input and evaluate it with the math library in case "pi" is entered
+    value = input("Enter an x value in radians (x must be in the range [-π, π]), or enter Q to quit: ")
     
-#     # sentinel value
-#     if value == "Q" or value == "q":
-#         break
+    # sentinel value
+    if value == "Q" or value == "q":
+        break
     
-#     # separate value to print original input later
-#     x = value
+    # separate value to print original input later
+    x = value
     
-#     # use try except in case the user enters an invalid input (not a number)
-#     try:
-#         x = eval(value)
+    # use try except in case the user enters an invalid input (not a number)
+    try:
+        x = eval(value)
     
-#     except: 
-#         print("Your input is invalid!")
+    except: 
+        print("Your input is invalid!")
     
-#     # check if input is out of range
-#     if x < -pi or x > pi:
-#         print("Your input is out of range!")
-#         continue
+    # check if input is out of range
+    if x < -pi or x > pi:
+        print("Your input is out of range!")
+        continue
     
-#     # keep track of result and count (for number of loop iterations)
-#     result = 0
-#     count = 0
+    # keep track of result and count (for number of loop iterations)
+    result = 0
+    count = 0
     
-#     for i in range(0, 150):
+    for i in range(0, 150):
         
-#         # taylor series formula
-#         result += ( ( -1 ) ** i ) / ( factorial ( ( 2 * i ) + 1 ) ) * ( x ** ( ( 2 * i ) + 1 ) )
+        # taylor series formula
+        result += ( ( -1 ) ** i ) / ( factorial ( ( 2 * i ) + 1 ) ) * ( x ** ( ( 2 * i ) + 1 ) )
         
-#         # increment count
-#         count += 1
+        # increment count
+        count += 1
         
-#         # print intermediate result
-#         print("Iteration", count, "=", result)
+        # print intermediate result
+        print("Iteration", count, "=", result)
         
-#         # keep track of absolute difference between my calculation and python's sin function
-#         difference = abs(result - sin(x))
+        # keep track of absolute difference between my calculation and python's sin function
+        difference = abs(result - sin(x))
         
-#         # if the difference between my result and python's result is low enough, stop calculations
-#         if difference < 0.000001:
-#             break
+        # if the difference between my result and python's result is low enough, stop calculations
+        if difference < 0.000001:
+            break
         
-#     # round result after calculation for more consistent comparison experience
-#     result = round(result, 8)
-#     print("When x =", value, "--> sin(x) using Taylor's formula is", result, "~", count, "loops")
+    # round result after calculation for more consistent comparison experience
+    result = round(result, 8)
+    print("When x =", value, "--> sin(x) using Taylor's formula is", result, "~", count, "loops")
+
+# OUTPUT:
+
+# TEST 1:
+# Enter an x value in radians (x must be in the range [-π, π]), or enter Q to quit: pi/3
+# Iteration 1 = 1.0471975511965976
+# Iteration 2 = 0.8558007815651174
+# Iteration 3 = 0.8662952837868348
+# Iteration 4 = 0.8660212716563727
+# Iteration 5 = 0.8660254450997812
+# When x = pi/3 --> sin(x) using Taylor's formula is 0.86602545 ~ 5 loops
+
+# TEST 2:
+# Enter an x value in radians (x must be in the range [-π, π]), or enter Q to quit: -pi/6
+# Iteration 1 = -0.5235987755982988
+# Iteration 2 = -0.49967417939436376
+# Iteration 3 = -0.5000021325887924
+# Iteration 4 = -0.4999999918690232
+# When x = -pi/6 --> sin(x) using Taylor's formula is -0.49999999 ~ 4 loops
+
+# TEST 3:
+# Enter an x value in radians (x must be in the range [-π, π]), or enter Q to quit: 0.112
+# Iteration 1 = 0.112
+# Iteration 2 = 0.11176584533333334
+# When x = 0.112 --> sin(x) using Taylor's formula is 0.11176585 ~ 2 loops
+
+
+# TEST 4:
+# Enter an x value in radians (x must be in the range [-π, π]), or enter Q to quit: pi
+# Iteration 1 = 3.141592653589793
+# Iteration 2 = -2.0261201264601763
+# Iteration 3 = 0.5240439134171688
+# Iteration 4 = -0.07522061590362306
+# Iteration 5 = 0.006925270707505149
+# Iteration 6 = -0.0004451602382091989
+# Iteration 7 = 2.114256755841339e-05
+# Iteration 8 = -7.727858894168152e-07
+# When x = pi --> sin(x) using Taylor's formula is -7.7e-07 ~ 8 loops
+
+# TEST 5:
+# Enter an x value in radians (x must be in the range [-π, π]), or enter Q to quit: pi/2
+# Iteration 1 = 1.5707963267948966
+# Iteration 2 = 0.9248322292886504
+# Iteration 3 = 1.0045248555348174
+# Iteration 4 = 0.9998431013994987
+# Iteration 5 = 1.0000035425842861
+# Iteration 6 = 0.999999943741051
+# When x = pi/2 --> sin(x) using Taylor's formula is 0.99999994 ~ 6 loops
+
+# TEST 6: 
+# Enter an x value in radians (x must be in the range [-π, π]), or enter Q to quit: -2.2222
+# Iteration 1 = -2.2222
+# Iteration 2 = -0.39326538582533344
+# Iteration 3 = -0.8448451477179943
+# Iteration 4 = -0.7917504116400895
+# Iteration 5 = -0.7953919530796295
+# Iteration 6 = -0.7952284752520616
+# Iteration 7 = -0.7952336501351901
+# When x = -2.2222 --> sin(x) using Taylor's formula is -0.79523365 ~ 7 loops
+
+# TEST 7:
+# Enter an x value in radians (x must be in the range [-π, π]), or enter Q to quit: 3.111111
+# Iteration 1 = 3.111111
+# Iteration 2 = -1.9076356044810439
+# Iteration 3 = 0.5211897392617555
+# Iteration 4 = -0.038539518081024515
+# Iteration 5 = 0.03670528754515892
+# Iteration 6 = 0.030084420721677576
+# Iteration 7 = 0.030495212049537725
+# Iteration 8 = 0.03047627845882414
+# When x = 3.111111 --> sin(x) using Taylor's formula is 0.03047628 ~ 8 loops
+
+
