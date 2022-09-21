@@ -34,9 +34,10 @@ print("fsum:", f_sum)
 
 # PREDICTION:
 
-# I predict that this code will have an error, because firstly, there is no
-# function defined as prob1, we only have a prob2 function.
-# Secondly, even if the first print statement had no errors, we are attempting
+# I predict that this code will print 0 1 2 3 None, and then throw an error, crashing the program.
+# The prob2 function doesn't return anything, it just prints 0 1 2 3, so trying to print the function
+# will result in None.
+# In the second print statement outside of the function, we are attempting to
 # to print i outside of the scope of the variable. i was declared within the function boundaries
 # and thus is only accessible from within the function's scope. Because we are trying to access
 # i outside of the function, an error will occur.
@@ -45,20 +46,24 @@ def prob2():
     for i in range(4):
         print(i, end = " ")
 
-print(prob1())
-print("i = ", i)
+print(prob2())
+# print("i = ", i) # THIS LINE IS COMMENTED OUT SO THE REST OF THE PROGRAM CAN RUN
 
-# OUTPUT: 
 
+# OUTPUT (this is the output if the final print statement in task 2 was not commented out): 
+
+# 0 1 2 3 None
 # Traceback (most recent call last):
-#   File "c:\Users\JRSiw\Desktop\Programming\School Workspace\CS2520\Lab 4\Lab4_jsiwiecki.py", line 45, in <module>
-#     print(prob1())
-# NameError: name 'prob1' is not defined. Did you mean: 'prob2'?
+#   File "c:\Users\JRSiw\Desktop\Programming\School Workspace\CS2520\Lab 4\Lab4_jsiwiecki.py", line 49, in <module>
+#     print("i = ", i)
+# NameError: name 'i' is not defined. Did you mean: 'id'?
 
 # EXPLANATION: 
 
-# My prediction was mostly correct, as the first print statement outside of the function throws an error,
-# and the second one doesn't run because the program crashed. If the second one did run, it would also throw an error.
+# My prediction was correct, as the first print statement outside of the function prints None, 
+# because our function doesn't return anything,
+# and the second one crashes the program because
+# we can't access i outside the function.
 
 # --------------------- TASK 3 ---------------------
 
