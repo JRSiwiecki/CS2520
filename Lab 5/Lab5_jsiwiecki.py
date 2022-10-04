@@ -37,8 +37,8 @@ while n <= 10:
     t2.circle(n ** 2)
     n += 1
     
-# t1.speed(10)
-# t2.speed(10)
+t1.speed(10)
+t2.speed(10)
 
 t1.pencolor("yellow")
 t2.pencolor("green")
@@ -95,6 +95,9 @@ t2.forward(4)
 t1.left(90)
 t2.left(90)
 
+t1.speed(0)
+t2.speed(0)
+
 # draw flowers
 for i in range(0, 38):
     t1.forward(100)
@@ -106,6 +109,9 @@ for i in range(0, 38):
     if abs(t1.pos()) < 1 or abs (t2.pos()) < 1:
         break
 
+
+t1.speed(10)
+t2.speed(10)
 
 # prepare to draw circles around flowers
 t1.penup()
@@ -181,6 +187,9 @@ t1.pendown()
 t2.pendown()
 
 # draw square pattern
+t1.speed(0)
+t2.speed(0)
+
 n = 0
 while n <= 396:
     
@@ -203,6 +212,9 @@ while n <= 396:
     n += 4
     
 # prepare to draw rectangles + triangles
+t1.speed(10)
+t2.speed(10)
+
 t1.penup()
 t2.penup()
 
@@ -231,11 +243,11 @@ for i in range(0, 4):
     t2.left(90)
     
     if i % 2 == 0:
-        t1.forward(400)
-        t2.forward(400)
+        t1.forward(402)
+        t2.forward(402)
     else:
-        t1.forward(200)
-        t2.forward(200)
+        t1.forward(198)
+        t2.forward(198)
     
 
 turtle.done()
