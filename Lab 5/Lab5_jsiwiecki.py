@@ -1,6 +1,6 @@
 # Author: Joseph Siwiecki
 # Assignment: Lab 5
-# Completed: 10/1/2022
+# Completed: 10/5/2022
 # Class: CS 2520.01
 
 import turtle
@@ -16,6 +16,7 @@ t2 = t1.clone()
 
 turtle.title("Lab 5 - JSiwiecki")
 turtle.bgcolor("black")
+screen.setup(1280, 720)
 
 t1.pencolor("aquamarine")
 t2.pencolor("magenta")
