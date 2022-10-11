@@ -6,7 +6,6 @@
 import hashlib
 
 # --------------------- PROBLEM 1 ---------------------
-
 # ----------- PART 1 -----------
 def get_num_of_characters(str):
     return len(str)
