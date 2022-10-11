@@ -5,6 +5,8 @@
 
 import timeit
 # --------------------- PROBLEM 2 ---------------------
+# This problem doesn't say to prompt user for input, so I didn't ask for it.
+# It can go for quite some time, however.
 # ----------- PART 1 -----------
 def primes(start, end, printAll):
     
@@ -26,7 +28,7 @@ def primes(start, end, printAll):
     
     else:
         for p in range(start, end + 1):
-            if prime[p] and (p == 547 or p == 8837):
+            if prime[p] and ((p == 547 or p == 8837) or (p == 8839 or p == 104729)):
                 yield p
     
     
@@ -38,6 +40,14 @@ def main():
     print("\n--- 101st to 1100th Primes ---")
     start = timeit.default_timer()
     print(*primes(547, 8837, False))
+    stop = timeit.default_timer()
+    print()
+    
+    print("Time to run: ", stop - start)
+    
+    print("\n--- 1101st to 10000th Primes ---")
+    start = timeit.default_timer()
+    print(*primes(8839, 104729, False))
     stop = timeit.default_timer()
     print()
     
@@ -54,3 +64,9 @@ main()
 # 547 8837
 
 # Time to run:  0.0008726000087335706
+
+# TEST CASE 2
+# --- 1101st to 10000th Primes ---
+# 8839 104729
+
+# Time to run:  0.010121200000867248
