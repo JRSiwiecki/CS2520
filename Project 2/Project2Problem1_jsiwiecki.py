@@ -1,5 +1,5 @@
 # Author: Joseph Siwiecki
-# Assignment: Project 2
+# Assignment: Project 2 Problem 1
 # Completed: 10/10/2022
 # Class: CS 2520.01
 
