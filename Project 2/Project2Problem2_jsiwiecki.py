@@ -4,8 +4,7 @@
 # Class: CS 2520.01
 
 import timeit
-# --------------------- PROBLEM 1 ---------------------
-
+# --------------------- PROBLEM 2 ---------------------
 # ----------- PART 1 -----------
 def primes(start, end, printAll):
     
