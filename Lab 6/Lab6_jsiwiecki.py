@@ -1,32 +1,32 @@
 # Author: Joseph Siwiecki
 # Assignment: Lab 6
-# Completed: 10/13/2022
+# Completed: 10/17/2022
 # Class: CS 2520.01
 
 # --------------------- TASK 1 ---------------------
 # ---------- PART 1 ----------
-# print("Enter three strings: ")
-# string_one = input("1st String: ")
-# string_two = input("2nd String: ")
-# string_three = input("3rd String: ")
+print("Enter three strings: ")
+string_one = input("1st String: ")
+string_two = input("2nd String: ")
+string_three = input("3rd String: ")
 
-# # ---------- PART 2 ----------
-# character_one = max(string_one)
-# character_two = max(string_two)
-# character_three = max(string_three)
+# ---------- PART 2 ----------
+character_one = max(string_one)
+character_two = max(string_two)
+character_three = max(string_three)
 
-# print("Largest character in the 1st string:", character_one)
-# print("Largest character in the 2nd string:", character_two)
-# print("Largest character in the 3rd string:", character_three)
+print("Largest character in the 1st string:", character_one)
+print("Largest character in the 2nd string:", character_two)
+print("Largest character in the 3rd string:", character_three)
 
-# largest_string = max(string_one, string_two, string_three)
-# print("The largest of the three strings:", largest_string)
+largest_string = max(string_one, string_two, string_three)
+print("The largest of the three strings:", largest_string)
 
 
-# # ---------- PART 3 ----------
-# special_character = input("Enter the special character or string you want in between the strings: ")
-# special_string = string_one + special_character + string_two + special_character + string_three
-# print("Special string:", special_string)
+# ---------- PART 3 ----------
+special_character = input("Enter the special character or string you want in between the strings: ")
+special_string = string_one + special_character + string_two + special_character + string_three
+print("Special string:", special_string)
 
 # OUTPUT
 
@@ -129,3 +129,38 @@ else:
 
 # --------------------- TASK 3 ---------------------
 # ---------- PART 1 ----------
+names_one = ("Jack", "Ada", "Lev", "Kay", "Winny")
+ages_one = [20, 18, 22, 16, 20]
+
+names_two = ("Jon", "Joe", "Sara", "Rob", "Tami", "Ary", "Denise", "Gabriel")
+ages_two = [20, 20, 25, 51, 53, 20, 20, 29]
+
+info_one = tuple(zip(names_one, ages_one))
+print("Combined tuple (1): ", info_one)
+
+info_two = tuple(zip(names_two, ages_two))
+print("Combined tuple (2): ", info_two)
+
+# ---------- PART 2 ----------
+min_one = info_one[0][1]
+index_of_min_one = 0
+
+for i in range(len(info_one)):
+    if info_one[i][1] < min_one:
+        min_one = info_one[i][1]
+        index_of_mine_one = i
+
+
+print("Youngest person:", info_one[index_of_min_one][0], "at age", info_one[index_of_min_one][1])
+    
+# average_age_one = sum(info_one[0]) / len(info_one[0])
+# print("Average age:", average_age_one)
+
+# ---------- PART 3 ----------
+
+# OUTPUT
+
+# TEST CASE 1
+# Combined tuple (1):  (('Jack', 20), ('Ada', 18), ('Lev', 22), ('Kay', 16), ('Winny', 20))
+# Combined tuple (2):  (('Jon', 20), ('Joe', 20), ('Sara', 25), ('Rob', 51), ('Tami', 53), ('Ary', 20), ('Denise', 20), ('Gabriel', 29))
+# Youngest person: Jack at age 20
