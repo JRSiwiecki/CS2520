@@ -93,5 +93,3 @@ def task_2():
     R3 = S1.difference(S2)
     # print("R3 (Difference):", R3)
     print("R3 Size:", len(R3))
-         
-task_1()
