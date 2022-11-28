@@ -192,7 +192,7 @@ def task1_test():
 
     print("Average Test Score out of", overall_test_count, "tests taken by", len(student_list), "students is", average_score)
 
-# task1_test()
+task1_test()
 
 # --------------------- TASK 2 ---------------------
 class Pair:
