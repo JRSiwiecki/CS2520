@@ -32,9 +32,6 @@ class Student:
         print("Student's Test Count:", self.test_count)
         print(" ------------------ ")
         
-        
-
-
 class Question:
     #instance variables
     def __init__(self, question, correct_answer, answers):
@@ -135,61 +132,64 @@ questionBank = [
     Question("Which volcano destroyed the ancient city of Pompeii?", "Mount Vesuvius", ["Taal", "Mount Vesuvius", "Mount Fuji", "Krakatoa"])
 ]
 
-test = Test(random.sample(questionBank, 5))
+def task1_test():
+    test = Test(random.sample(questionBank, 5))
 
-student_list = []
-score_list = []
-overall_test_count = 0
+    student_list = []
+    score_list = []
+    overall_test_count = 0
 
-joseph = Student("Joseph", 0)
-jon = Student("Jon", 1)
-sara = Student("Sara", 2)
-denise = Student("Denise", 3)
-ary = Student("Ary", 4)
+    joseph = Student("Joseph", 0)
+    jon = Student("Jon", 1)
+    sara = Student("Sara", 2)
+    denise = Student("Denise", 3)
+    ary = Student("Ary", 4)
 
-student_list.append(joseph)
-student_list.append(jon)
-student_list.append(sara)
-student_list.append(denise)
-student_list.append(ary)
+    student_list.append(joseph)
+    student_list.append(jon)
+    student_list.append(sara)
+    student_list.append(denise)
+    student_list.append(ary)
 
-for student in student_list:
-    print("\n-------------")
-    print("Taking test for Student", student.name)
-    
-    if student.id == 0:
+    for student in student_list:
+        print("\n-------------")
+        print("Taking test for Student", student.name)
+        
+        if student.id == 0:
+            student.take_test(test)
+            score_list.append(student.current_quiz_score)
+            print("Retaking test...")
+            student.take_test(test)
+            score_list.append(student.current_quiz_score)
+            print("Retaking test...")
+            student.take_test(test)
+            score_list.append(student.current_quiz_score)
+            overall_test_count += 3
+            continue
+        
+        elif student.id == 1:
+            student.take_test(test)
+            score_list.append(student.current_quiz_score)
+            print("Retaking test...")
+            student.take_test(test)
+            score_list.append(student.current_quiz_score)
+            overall_test_count += 2
+            continue   
+        
         student.take_test(test)
         score_list.append(student.current_quiz_score)
-        print("Retaking test...")
-        student.take_test(test)
-        score_list.append(student.current_quiz_score)
-        print("Retaking test...")
-        student.take_test(test)
-        score_list.append(student.current_quiz_score)
-        overall_test_count += 3
-        continue
-    
-    elif student.id == 1:
-        student.take_test(test)
-        score_list.append(student.current_quiz_score)
-        print("Retaking test...")
-        student.take_test(test)
-        score_list.append(student.current_quiz_score)
-        overall_test_count += 2
-        continue   
-    
-    student.take_test(test)
-    score_list.append(student.current_quiz_score)
-    overall_test_count += 1
-    print("-------------\n")
-    
-    
-joseph.display_individual_stats()
-jon.display_individual_stats()
-sara.display_individual_stats()
-denise.display_individual_stats()
-ary.display_individual_stats()
+        overall_test_count += 1
+        print("-------------\n")
+        
+        
+    joseph.display_individual_stats()
+    jon.display_individual_stats()
+    sara.display_individual_stats()
+    denise.display_individual_stats()
+    ary.display_individual_stats()
 
-average_score = sum(score_list) / len(score_list)
+    average_score = sum(score_list) / len(score_list)
 
-print("Average Test Score out of", overall_test_count, "tests taken by", len(student_list), "students is", average_score)
+    print("Average Test Score out of", overall_test_count, "tests taken by", len(student_list), "students is", average_score)
+
+# --------------------- TASK 2 ---------------------
