@@ -192,4 +192,73 @@ def task1_test():
 
     print("Average Test Score out of", overall_test_count, "tests taken by", len(student_list), "students is", average_score)
 
+# task1_test()
+
 # --------------------- TASK 2 ---------------------
+class Pair:
+    
+    def __init__(self, x = 0, y = 0):
+        self.x = x
+        self.y = y
+    
+    def __str__(self):
+        return f"<{self.x}, {self.y}>"
+    
+    def __add__(p1, p2):
+        x_sum = (p1.x + p2.x)
+        y_sum = (p1.y + p2.y)
+        
+        p3 = Pair(x_sum, y_sum)
+        return p3
+        
+    def __mul__(p1, p2):
+        x_product = (p1.x * p2.x)
+        y_product = (p1.y * p2.y)
+        
+        p3 = Pair(x_product, y_product)
+        return p3
+        
+        
+    def __truediv__(p1, p2):
+        x_quotient = (p1.x * p1.y - p2.x * p2.y)
+        y_quotient = (p1.x * p2.x - p1.y * p2.y)
+        
+        p3 = Pair(x_quotient, y_quotient)
+        return p3
+        
+
+def task2_test():
+    p1 = Pair(3, 2)
+    p2 = Pair(1, 5)
+    p3 = Pair(4, 3)
+    
+    print("P1:", p1)
+    print("P2:", p2)
+    print("P3:", p2)
+    
+    print("P1 + P2:", p1 + p2)
+    print("P1 * P2:", p1 * p2)
+    print("P1 / P2:", p1 / p2)
+    
+    print("P1 + P2 * P3", p1 + p2 * p3)
+    print("P1 * P2 / P3 + P1", p1 * p2 / p3 * p1)
+    
+    print("------------------")
+    
+    p4 = Pair(10, 20)
+    p5 = Pair(-5, 5)
+    p6 = Pair(0, 0)
+    
+    print("P4:", p4)
+    print("P5:", p5)
+    print("P6:", p6)
+    
+    print("P4 + P5:", p4 + p5)
+    print("P4 * P5:", p4 * p5)
+    print("P4 / P5:", p4 / p5)
+    
+    print("P4 + P5 * P6", p4 + p5 * p6)
+    print("P4 * P5 / P6 + P4", p4 * p6 / p4 * p4)
+
+
+task2_test()
