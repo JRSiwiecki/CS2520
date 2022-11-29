@@ -38,9 +38,7 @@ def task_1_tests():
 # --------------------- TASK 2 ---------------------
 def gen_sort(cmp, lst):
     
-    
-    
-    return
+    return sorted(lst, key=cmp)
 
 def is_bigger(x, y):
     if x > y:
